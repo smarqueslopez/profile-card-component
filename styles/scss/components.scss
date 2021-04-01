@@ -1,0 +1,52 @@
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	z-index: -1;
+	overflow: hidden;
+	font-family: $font-family-body;
+	background: $dark-cyan;
+
+	&:before,
+	&:after {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		content: "";
+		background-size: auto;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+		background: url("../images/bg-pattern-top.svg") no-repeat bottom right;
+	}
+
+	&:after {
+		top: 100%;
+		left: 100%;
+		background: url("../images/bg-pattern-bottom.svg") no-repeat top left;
+	}
+
+	&__main {
+		display: flex;
+		flex-grow: 1;
+		padding: rem(18);
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__footer {
+		padding: $spacer-normal;
+		font-size: rem(12);
+		text-align: center;
+		align-self: center;
+
+		> * {
+			margin: 0;
+		}
+	}
+}
