@@ -1,0 +1,22 @@
+{
+  "name": "profile-card-component",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge - Profile card component",
+  "main": "index.html",
+  "scripts": {
+    "scss": "node-sass -w styles/scss -o styles --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smarqueslopez/profile-card-component.git"
+  },
+  "author": "smarqueslopez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smarqueslopez/profile-card-component/issues"
+  },
+  "homepage": "https://github.com/smarqueslopez/profile-card-component#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

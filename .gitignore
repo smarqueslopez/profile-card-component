@@ -15,3 +15,7 @@
 .DS_Store
 
 .prettierignore
+
+# Node
+node_modules/
+package-lock.json
