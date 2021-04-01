@@ -75,7 +75,7 @@
 			top: 0;
 			width: 100%;
 			height: rem(140);
-			background: url("/images/bg-pattern-card.svg") no-repeat center;
+			background: url("../images/bg-pattern-card.svg") no-repeat center;
 			background-size: auto;
 			background-size: cover;
 			border-top-left-radius: $radius;
@@ -118,7 +118,6 @@
 	}
 
 	&__stats {
-
 		display: flex;
 		justify-content: space-evenly;
 		position: relative;
