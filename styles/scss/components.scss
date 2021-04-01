@@ -50,3 +50,129 @@
 		}
 	}
 }
+
+.profile-card {
+	width: 100%;
+	position: relative;
+	background: $white;
+	border-radius: $radius;
+	max-width: rem(360);
+	box-shadow: 0 4rem 4rem -2rem darken($dark-cyan, 8);
+
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: $spacer-large $spacer-normal;
+		padding-top: rem(140);
+		color: $dark-grayish-blue;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: rem(140);
+			background: url("/images/bg-pattern-card.svg") no-repeat center;
+			background-size: auto;
+			background-size: cover;
+			border-top-left-radius: $radius;
+			border-top-right-radius: $radius;
+		}
+	}
+
+	&__avatar {
+		order: 1;
+		border-radius: 50%;
+		margin-top: rem(-50);
+		border: rem(5) solid $white;
+		z-index: 1;
+	}
+
+	&__title {
+		order: 2;
+		margin-top: $spacer-large;
+
+		&__name {
+			display: inline-block;
+			font-size: rem(18);
+			font-weight: $font-weight-bold;
+			color: $very-dark-desaturated-blue;
+		}
+
+		&__age {
+			display: inline-block;
+			font-size: rem(18);
+			margin-top: $spacer-tiny;
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	&__location {
+		order: 3;
+		font-size: rem(14);
+		margin-top: $spacer-small;
+		margin-bottom: $spacer-tiny;
+	}
+
+	&__stats {
+
+		display: flex;
+		justify-content: space-evenly;
+		position: relative;
+		flex-wrap: wrap;
+		padding: $spacer-large $spacer-normal;
+
+		> * {
+			list-style-type: none;
+			position: relative;
+
+			&::before {
+				content: "\200B";
+				height: 0;
+				display: block;
+			}
+		}
+
+		&:before {
+			content: "";
+			height: 1px;
+			background: $dark-gray;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+		}
+
+		&__item {
+			color: $very-dark-desaturated-blue;
+			text-align: center;
+			margin: $spacer-tiny;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			&__number {
+				display: block;
+				font-size: 1rem;
+				font-weight: $font-weight-bold;
+				color: $very-dark-desaturated-blue;
+			}
+
+			&__label {
+				display: block;
+				font-size: rem(12);
+				margin-top: $spacer-tiny;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}
